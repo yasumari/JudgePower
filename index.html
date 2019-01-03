@@ -1,99 +1,84 @@
 <!DOCTYPE html>
-<html class="no-js" lang="de"> 
+<html class="no-js" lang="de">
 <head>
+      <meta charset="UTF-8">
 
 	<title>JudgePower</title>
 
- 	<!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">     
+      <!-- CSS
+      ================================================== -->
+      <link rel="stylesheet" href="css/base.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/vendor.css">
 
-   
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+      <script src="http://responsivevoice.org/responsivevoice/responsivevoice.js"></script>
+
+      <script>
+          responsiveVoice.OnVoiceReady = function() {
+              responsiveVoice.speak("Hallo! Ich bin Richterin Alexa! Hilfst du mir bitte bei meinem Urteil? Nimm den Hammer in die Hand und lege los! Schlag auf einen beliebigen Button, wenn du bereit bist!", "Deutsch Female");
+              console.log("document ready")
+          };
+          </script>
 
 </head>
 
-<body onload='responsiveVoice.speak("Hilf der Richterin bei deinem Urteil!", "Deutsch Female");'>
+<body>
 
-	<!-- header 
-   ================================================== -->
-   <header>
-  	
-   	
-   </header> <!-- /header -->
-
-	<!-- intro section
-   ================================================== -->
    <section id="intro">
 
    	<div class="shadow-overlay"></div>
 
+         <!-- positioning ist hier noch nicht ganz mittig... schau ich mich spaeter nochmal an! -->
+
    	<div class="intro-content">
-   		<div class="row">
+            <div class="container">
+   		      <div class="row justify-content-center">
+                        <center>
+                              <img src="images/logo.png" alt="JudgePower" width="50%">
+                        </center>
+                  </div>
 
-   			<div class="col-twelve">
-   				<br/>
-   				<br/>
+                  <div class="row justify-content-center mt-5">
+                        <center>
+                              <h1>Hallo, ich bin Richterin Alexa!<br>Hilfst du mir bitte bei meinem Urteil? Nimm den Hammer in die Hand und lege los!</h1>
+                        </center>
+                  </div>
 
-	   			<h1>Judge Power</h1>
-	   			<h5>Hilf der Richterin bei deinem Urteil</h5>
+                  <div class="row justify-content-center mt-5">
+                        <div class="col-4">
+                              <img class="img-fluid" src="images/tut1.png" alt="Tutorial 1" style="border:5px solid #000000">
+                        </div>
 
-               <br/>
-               <br/>
-               <br/><br/>
-               
+                        <div class="col-4">
+                        <img class="img-fluid" src="images/tut2.png" alt="Tutorial 2" style="border:5px solid #000000">
+                        </div>
 
+                        <div class="col-4">
+                              <img class="img-fluid" src="images/tut3.png" alt="Tutorial 3" style="border:5px solid #000000">
+                        </div>
+                  </div>
+
+                  <div class="row justify-content-center mt-5">
+                        <center>
+                              <a class="button button-primary " href="q1.html">Schlag auf einen beliebigen Button, wenn du bereit bist!</a>
+                        </center>
+                  </div>
             </div>
-
-   			<div class="container">
-               <div class="row">
-
-
-                  <a class="button button-primary " href="q1.html">Start</a>
-                     
-
-                     <br/>
-                     <br/>
-                     <br/>
-                     <br/>
-                     <br/>
-                     <br/>
-
-
-					<div class='video-link'>
-                        <a href="#video-popup"><img src="images/play-button.png" alt="Tutorial"></a>
-                        <h6 style="color:white;">Tutorial</h6>
-                     </div>
-                     
-                  
-
-               </div> 
-
-               </div> 
-   		</div>   		 		
-   	</div> 
-
-   	<!-- Modal Popup
-	   ========================================================= -->
-
-      <div id="video-popup" class="popup-modal mfp-hide">
-
-		   <div class="fluid-video-wrapper">
-            <iframe src="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=faec09" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-         </div>		     
-
-         <a class="close-popup">Close</a>         
-
-	   </div> <!-- /video-popup -->  	 	
-
-   </section> <!-- /intro -->
-
-  
+   	</div>
+   </section>
 
    <!-- Java Script
-   ================================================== --> 
-   <script src='https://code.responsivevoice.org/responsivevoice.js'></script>  
+   ================================================== -->
+   <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
    <script src="js/jquery-1.11.3.min.js"></script>
    <script src="js/jquery-migrate-1.2.1.min.js"></script>
    <script src="js/plugins.js"></script>

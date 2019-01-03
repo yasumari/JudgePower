@@ -1,103 +1,93 @@
 <!DOCTYPE html>
 <html class="no-js" lang="de"> 
 <head>
+  <meta charset="UTF-8">
 
-   <title>JudgePower</title>
+  <title>JudgePower Prototype</title>
 
-   <!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">  
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="css/base.css">  
+  <link rel="stylesheet" href="css/main.css">
+  <link 0rel="stylesheet" href="css/vendor.css">  
 
 
-   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- j0Query library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script src="http://responsivevoice.org/responsivevoice/responsivevoice.js"></script>
 
-   
+  <script>
+      responsiveVoice.OnVoiceReady = function() {
+          responsiveVoice.speak("Welches davon ist das beste Muttertags-Geschenk?", "Deutsch Female");
+          console.log("document ready")
+      };
+      </script>
 
 </head>
 
-<body onload='responsiveVoice.speak("Was würdest du deiner Mutter zum Muttertag schenken?", "Deutsch Female");'>
+<body class="d-flex flex-column">
 
-   <!-- header 
-   ================================================== -->
-   <header>
-   
-      
-   </header> 
+  <div class="container m-auto">
 
-<br/><br/>
-               
-<h3 class="text-center">Was wuerdest du deiner Mutter zum Muttertag schenken?</h5>
+      <div class="row justify-content-center">
+          <h1 class="text-center">Welches davon ist das beste Muttertags-Geschenk?</h1>
+          <!-- <h5 class="text-center">Du kannst mehrere Sachen auswaehlen</h5> -->
+          <!-- wollten wir die multiple choice fragen nicht weglassen und eine "normale" frage hieraus machen, bei der man nur eine sache auswählen kann? -->
+      </div>
 
-               <h5 class="text-center">Du kannst mehrere Sachen auswaehlen</h6> <!-- wollten wir die multiple choice fragen nicht weglassen und eine "normale" frage hieraus machen, bei der man nur eine sache auswählen kann? -->
-<br/><br/>
-               
+      <div class="row justify-content-center mt-5">
+        <div class="col-3">
+          <center>
+            <!-- <a href=#  onclick='responsiveVoice.speak("Blumen", "Deutsch Female");'><img src="images/flowers.jpg" alt="Blumen"></a> -->
+            <a href="q4.html"><img src="images/flowers.jpg" alt="Blumen"></a>
+            <h4 class="text-center">Blumen</h4>
+            </center>
+        </div>
 
-              <div class="row" style="margin-left: -60px;">
-                <div class="col-sm-3 col-sm-offset-3" style="width: 30%;">
-                  <a href=#  onclick='responsiveVoice.speak("Blumen", "Deutsch Female");'><img style= "width:500px; height: 200px;" src="images/flowers.jpg" alt="Blumen" height="300" width="300"></a>
-                  <h6 class="text-center">Blumen</h6>
-               </div>
+        <div class="col-3">
+          <!-- <a href=#  onclick='responsiveVoice.speak("Entspannungsurlaub", "Deutsch Female");'><img src="images/vacation.jpg" alt="Entspannungsurlaub"></a> -->
+          <center>
+            <a href="q4.html"><img src="images/vacation.jpg" alt="Entspannungsurlaub"></a>
+            <h4 class="text-center">Entspannungsurlaub</h4>
+          </center>
+        </div>
 
+        <div class="col-3">
+          <center>
+            <!-- <a href=#  onclick='responsiveVoice.speak("Saugroboter", "Deutsch Female");'><img src="images/vacuum.jpg" alt="Saugroboter"></a> -->
+            <a href="q4.html"><img src="images/vacuum.jpg" alt="Saugroboter"></a>
+            <h4 class="text-center">Saugroboter</h4>
+          </center>
+        </div>
 
-               <div class="col-sm-3" style="width: 30%;">
-                  <a href=#  onclick='responsiveVoice.speak("Entspannungsurlaub", "Deutsch Female");'><img style= "width:500px; height: 200px;" src="images/vacation.jpg" alt="Entspannungsurlaub" height="230" width="230"></a>
-                  <h6 class="text-center">Entspannungsurlaub</h6>
-               </div>
-            </div>
+        <div class="col-3">
+          <center>
+            <!-- <a href=#  onclick='responsiveVoice.speak("Schmuck", "Deutsch Female");'><img src="images/jewelry.jpg" alt="Schmuck"></a> -->
+            <a href="q4.html"><img src="images/jewelry.jpg" alt="Schmuck"></a>
+            <h4 class="text-center">Schmuck</h4>
+          </center>
+        </div>
+    </div>
+  </div>
 
-
-              <div class="row" style="margin-left: -60px;">              
-                <div class="col-sm-3 col-sm-offset-3" style="width: 30%;">
-                  <a href=#  onclick='responsiveVoice.speak("Saugroboter", "Deutsch Female");'><img style= "width:500px; height: 200px;" src="images/vacuum.jpg" alt="Saugroboter" height="230" width="230"></a>
-                  <h6 class="text-center">Saugroboter</h6>
-               </div>
-
-
-               <div class="col-sm-3" style="width: 30%;">
-                  <a href=#  onclick='responsiveVoice.speak("Schmuck", "Deutsch Female");'><img style= "width:500px; height: 200px;" src="images/jewelry.jpg" alt="Schmuck" height="230" width="230"></a>
-                  <h6 class="text-center">Schmuck</h6>
-               </div>
-            </div>
-
-<div class="text-center">
- <a class="button button-primary" href="q4.html">Bestaetigen</a>
- </div>
-               
-
-   	<!-- Modal Popup
-	   ========================================================= -->
-
-      <div id="video-popup" class="popup-modal mfp-hide">
-
-		   <div class="fluid-video-wrapper">
-            <iframe src="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=faec09" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-         </div>		     
-
-         <a class="close-popup">Close</a>         
-
-	   </div> <!-- /video-popup -->  	 	
-
-   </section> <!-- /intro -->
-
-  
+  <!--
+  <div class="text-center">
+  <a class="button button-primary" href="q4.html">Bestaetigen</a>
+  </div>
+  -->
 
    <!-- Java Script
-   ================================================== --> 
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>  
+   ================================================== -->
    <script src="js/jquery-1.11.3.min.js"></script>
    <script src="js/jquery-migrate-1.2.1.min.js"></script>
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
 
 </body>
-
 </html>

@@ -1,111 +1,53 @@
 <!DOCTYPE html>
-<html class="no-js" lang="de"> 
+<html class="no-js" lang="de">
 <head>
+    <meta charset="UTF-8">
 
-   <title>JudgePower</title>
+    <title>JudgePower Prototype</title>
 
-   <!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">  
-
-
-   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
-
-   </header>    
-<body onload='responsiveVoice.speak("Wieviel Geld würdest du für das Geburtstagsgeschenk deines besten Freundes ausgeben?", "Deutsch Female");'>
-
-      
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/vendor.css">
 
 
-    <br/><br/>
-               
-<h3 class="text-center">Wieviel Geld wuerdest du fuer das Geburtstagsgeschenk deines besten Freundes ausgeben?</h3>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
- <br/><br/>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="http://responsivevoice.org/responsivevoice/responsivevoice.js"></script>
 
+    <script>
+        responsiveVoice.OnVoiceReady = function() {
+            responsiveVoice.speak("Welcher Preis ist fuer das Geburtstagsgeschenk des besten Freundes angebracht?", "Deutsch Female");
+            console.log("document ready")
+    };
+</script>
 
-<div class="col-sm-9" style="float: right; margin-top: 100px">
+</head>
 
-            <a href="endscreen.html"><img src="images/skaler.png" alt="Money scale" height="300" width="600"></a>
-             </div>
+<body class="d-flex flex-column">
 
-               <br/>
-               <br/>
-               
+    <div class="container m-auto">
 
-            </div>
+        <div class="row justify-content-center">
+            <h1 class="text-center">Welcher Preis ist für das Geburtstagsgeschenk des besten Freundes angebracht?</h1>
+        </div>
 
-   			<div class="container">
-            
-
-            </div> 
-   		</div>   		 		
-   	</div>
-
-
-
-
-
-
-
-
-<!-- <div id="mainContainer">
-   <div class="wrapper">
-      <div class="page">
-         <div class="content">
-            <form action="" class="group">
-               <div id="ratingsBar" class="group">
-                  <input id="cb1" name="cb1" type="radio" value="5" /><label for="cb1" class="rating"><50</label>
-                  <input id="cb2" name="cb1" type="radio" value="4" /><label for="cb2" class="rating">30-50</label>
-                  <input id="cb3" name="cb1" type="radio" value="3" /><label for="cb3" class="rating">20-30</label>
-                  <input id="cb4" name="cb1" type="radio" value="2" /><label for="cb4" class="rating">5-20</label>
-                  <input id="cb5" name="cb1" type="radio" value="1" /><label for="cb5" class="rating">>5</label>
-               </div>
-            </form>
-         </div>
-      </div>
-   </div>
-</div> -->
-
-
-
-
-
-
-
-
-
-
-   	<!-- Modal Popup
-	   ========================================================= -->
-
-      <div id="video-popup" class="popup-modal mfp-hide">
-
-		   <div class="fluid-video-wrapper">
-            <iframe src="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=faec09" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-         </div>		     
-
-         <a class="close-popup">Close</a>         
-
-	   </div> <!-- /video-popup -->  	 	
-
-   </section> <!-- /intro -->
-
-  
+        <div class="row justify-content-center mt-5">
+            <center>
+                <a href="endscreen.html"><img src="images/skaler.png" alt="Money scale"></a>
+            </center>
+        </div>
+    </div>
 
    <!-- Java Script
-   ================================================== --> 
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>  
+   ================================================== -->
    <script src="js/jquery-1.11.3.min.js"></script>
    <script src="js/jquery-migrate-1.2.1.min.js"></script>
    <script src="js/plugins.js"></script>

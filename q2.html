@@ -1,89 +1,67 @@
 <!DOCTYPE html>
-<html class="no-js" lang="de"> 
+<html class="no-js" lang="de">
 <head>
+    <meta charset="UTF-8">
 
-   <title>JudgePower</title>
+    <title>JudgePower Prototype</title>
 
-   <!-- CSS
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/vendor.css">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="http://responsivevoice.org/responsivevoice/responsivevoice.js"></script>
+
+    <script>
+        responsiveVoice.OnVoiceReady = function() {
+            responsiveVoice.speak("Ich bevorzuge Gutscheine oder Geld als Geschenk.", "Deutsch Female");
+            console.log("document ready")
+        };
+    </script>
+
+</head>
+<body class="d-flex flex-column">
+
+    <div class="container m-auto">
+
+        <div class="row justify-content-center">
+            <h1 class="text-center">Ich bevorzuge Gutscheine oder Geld als Geschenk.</h1>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-5">
+                <center>
+                    <a href="q3.html"><img src="images/like.jpg" alt="Ja" width="50%"></a>
+                </center>
+            </div>
+
+            <div class="col-2"></div>
+
+            <div class="col-5">
+                <center>
+                    <a href="q3.html"><img src="images/dislike.jpg" alt="Nein" width="50%"></a>
+                </center>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Java Script
    ================================================== -->
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">  
-
-
-   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
-
-   </header>    
-<body onload='responsiveVoice.speak("Würdest du lieber einen Gutschein anstelle eines richtigen Geschenks bekommen?", "Deutsch Female");'>
-
-   	
-
-
-    <br/><br/>
-               
-<h3 class="text-center"> Wuerdest du lieber einen Gutschein anstelle eines richtigen Geschenks bekommen?</h3>
-
- <br/><br/>
-
-               <div class="row" style="margin-top: 100px" >
-                <div class="col-sm-3 col-sm-offset-3">
-                  <a href="q3.html"><img src="images/like.jpg" alt="Smiley face" style="height: 230px; width: 200px;"></a>
-             
-               </div>
-
-
-               <div class="col-sm-3 col-sm-offset-3">
-                  <a href="q3.html"><img src="images/dislike.jpg" alt="Frowny face" style="height: 230px; width: 200px;"></a>
-          
-               </div>
-            </div>
-
-
-               <br/>
-               <br/>
-               
-
-            </div>
-
-   			<div class="container">
-            
-
-            </div> 
-   		</div>   		 		
-   	</div> 
-
-   	<!-- Modal Popup
-	   ========================================================= -->
-
-      <div id="video-popup" class="popup-modal mfp-hide">
-
-		   <div class="fluid-video-wrapper">
-            <iframe src="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=faec09" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-         </div>		     
-
-         <a class="close-popup">Close</a>         
-
-	   </div> <!-- /video-popup -->  	 	
-
-   </section> <!-- /intro -->
-
-  
-
-   <!-- Java Script
-   ================================================== --> 
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>  
    <script src="js/jquery-1.11.3.min.js"></script>
    <script src="js/jquery-migrate-1.2.1.min.js"></script>
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
 
 </body>
-
 </html>

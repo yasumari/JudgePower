@@ -1,87 +1,77 @@
 <!DOCTYPE html>
-<html class="no-js" lang="de"> 
+<html class="no-js" lang="de">
 <head>
+  <meta charset="UTF-8">
+  <title>JudgePower Prototype</title>
 
-	<title>JudgePower</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/vendor.css">
 
- 	<!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script src="http://responsivevoice.org/responsivevoice/responsivevoice.js"></script>
 
-
-   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
-
-   
+  <script>
+      responsiveVoice.OnVoiceReady = function() {
+        responsiveVoice.speak("Was verschenkt man am besten?", "Deutsch Female");
+        console.log("document ready")
+      };
+    </script>
 
 </head>
 
-<body onload='responsiveVoice.speak("Welches dieser Geschenke würdest du am liebsten verschenken?", "Deutsch Female");'>
+<body class="d-flex flex-column">
 
-	<!-- header 
-   ================================================== -->
-   <header>
-  	
-   	
-   </header> 
+  <div class="container m-auto">
 
-	
-<br/><br/>
-	   			
-<h3 class="text-center">Welches dieser Geschenke wuerdest du am liebsten verschenken?</h5>
+      <div class="row justify-content-center">
+        <h1 class="text-center">Was verschenkt man am besten?</h1>
+        <!-- <h5 class="text-center">Wähle nur ein Geschenk</h5> -->
+      </div>
 
-               <h5 class="text-center">Waehle nur ein Geschenk</h6>
-<br/><br/>
+    <div class="row justify-content-center mt-5">
+      <div class="col-3 ">
+        <center>
+          <a href="q2.html"><img src="images/money.jpg" alt="Geld"></a>
+          <h4 class="text-center">Geld</h4>
+        </center>
+      </div>
 
-              <div class="row" style="margin-left: -60px;">
-                <div class="col-sm-3 col-sm-offset-3" style="width: 30%;">
-                  <a href="q2.html"><img style= "width:500px; height: 200px;" src="images/money.png" alt="Geld" height="300" width="300"></a>
-                  <h6 class="text-center">Geld</h6>
-               </div>
+      <div class="col-3 ">
+        <center>
+          <a href="q2.html"><img src="images/tech.jpg" alt="Technik"></a>
+          <h4 class="text-center">Technik</h4>
+        </center>
+      </div>
 
+      <div class="col-3 ">
+        <center>
+          <a href="q2.html"><img src="images/Parfum.jpg" alt="Parfum"></a>
+          <h4 class="text-center">Parfum</h4>
+        </center>
+      </div>
 
-               <div class="col-sm-3" style="width: 30%;">
-                  <a href="q2.html"><img style= "width:500px; height: 200px;" src="images/tech.jpg" alt="Technik" height="230" width="230"></a>
-                  <h6 class="text-center">Technik</h6>
-               </div>
-            </div>
-
-
-              <div class="row" style="margin-left: -60px;">              
-                <div class="col-sm-3 col-sm-offset-3" style="width: 30%;">
-                  <a href="q2.html"><img style= "width:500px; height: 200px;" src="images/Parfum.jpg" alt="Parfum" height="230" width="230"></a>
-                  <h6 class="text-center">Parfum</h6>
-               </div>
-
-
-               <div class="col-sm-3" style="width: 30%;">
-                  <a href="q2.html"><img style= "width:500px; height: 200px;" src="images/candy.jpg" alt="Suessigkeiten" height="230" width="230"></a>
-                  <h6 class="text-center">Suessigkeiten</h6>
-               </div>
-            </div>
-             
-
-               <br/>
-               <br/>
-               
-
-  
+      <div class="col-3 ">
+        <center>
+          <a href="q2.html"><img src="images/candy.jpg" alt="Suessigkeiten"></a>
+          <h4 class="text-center">Suessigkeiten</h4>
+        </center>
+      </div>
+    </div>
+  </div>
 
    <!-- Java Script
-   ================================================== --> 
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>  
-   <script src="js/jquery-1.11.3.min.js"></script>
-   <script src="js/jquery-migrate-1.2.1.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
+   ================================================== -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
