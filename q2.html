@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="de">
+
 <head>
     <meta charset="UTF-8">
 
@@ -23,33 +24,153 @@
     <script src="http://responsivevoice.org/responsivevoice/responsivevoice.js"></script>
 
     <script>
-        responsiveVoice.OnVoiceReady = function() {
+        responsiveVoice.OnVoiceReady = function () {
             responsiveVoice.speak("Ich bevorzuge Gutscheine oder Geld als Geschenk.", "Deutsch Female");
             console.log("document ready")
         };
     </script>
 
+    <!-- Keybindings fuer die Links mit Wartezeit fuer die Animation -->
+    <script>
+
+        $(window).on("load", function () {
+            $(window).focus()
+        });
+
+        $(document).keydown(function (e) {
+
+            var href = "q3.html";
+
+            switch (e.which) {
+                case 49: // 1
+                    $('.yellow_box .overlay').addClass('selected');
+
+                    setTimeout(function () {
+                        window.location.href = href;
+                    }, 1200);
+                    break;
+
+                case 50: // 2
+                    $('.green_box .overlay').addClass('selected');
+
+                    setTimeout(function () {
+                        window.location.href = href;
+                    }, 1200);
+                    break;
+
+                case 51: // 3s
+                    $('.blue_box .overlay').addClass('selected');
+
+                    setTimeout(function () {
+                        window.location.href = href;
+                    }, 1200);
+                    break;
+
+                case 52: // 4
+                    $('.red_box .overlay').addClass('selected');
+
+                    setTimeout(function () {
+                        window.location.href = href;
+                    }, 1200);
+                    break;
+            }
+
+            e.preventDefault();
+        });
+    </script>
+
+    <style>
+        .box {
+            position: relative;
+            width: 100%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: 1s ease;
+            transition: 1s ease;
+        }
+
+        .selected {
+            -webkit-transform: scale(2);
+            -ms-transform: scale(2);
+            transform: scale(2);
+        }
+
+        .text {
+            color: #17c152;
+            font-size: 5em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .box_element {
+            max-width: 40%;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h4 {
+            font-size: 2rem;
+        }
+    </style>
+
 </head>
-<body class="d-flex flex-column">
 
-    <div class="container m-auto">
+<body class="d-flex flex-column justify-content-center">
 
-        <div class="row justify-content-center">
+    <div>
+
+        <div class="mb-5">
             <h1 class="text-center">Ich bevorzuge Gutscheine oder Geld als Geschenk.</h1>
         </div>
 
-        <div class="row justify-content-center mt-5">
-            <div class="col-5">
+        <div class="d-flex flex-row justify-content-around">
+            <div class="box_element yellow_box green_box">
                 <center>
-                    <a href="q3.html"><img src="images/like.jpg" alt="Ja" width="50%"></a>
+                    <div class="box">
+                        <a href="q3.html"><img src="images/like.jpg" alt="Ja" width="50%"></a>
+                        <div class="overlay">
+                            <div class="text"><img src="images/check.png"></div>
+                        </div>
+                    </div>
+                    <img src="images/yellow.png" width="20%">
+                    <img src="images/green.png" width="20%">
                 </center>
             </div>
 
-            <div class="col-2"></div>
-
-            <div class="col-5">
+            <div class="box_element red_box blue_box">
                 <center>
-                    <a href="q3.html"><img src="images/dislike.jpg" alt="Nein" width="50%"></a>
+                    <div class="box">
+                        <a href="q3.html"><img src="images/dislike.jpg" alt="Nein" width="50%"></a>
+                        <div class="overlay">
+                            <div class="text"><img src="images/check.png"></div>
+                        </div>
+                    </div>
+                    <img src="images/blue.png" width="20%">
+                    <img src="images/red.png" width="20%">
                 </center>
             </div>
 
@@ -57,11 +178,13 @@
     </div>
 
     <!-- Java Script
-   ================================================== -->
-   <script src="js/jquery-1.11.3.min.js"></script>
-   <script src="js/jquery-migrate-1.2.1.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
+    ================================================== -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
 
 </body>
+
 </html>

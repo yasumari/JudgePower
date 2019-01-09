@@ -69,7 +69,7 @@ html, body {
 }
 body {
 	background: #14181E;
-	font-family: "merriweather-regular", serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.6rem;
 	line-height: 3rem;
 	color: #737373;
@@ -98,7 +98,7 @@ a:hover, a:focus {
  */
 
 h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
-	font-family: "raleway-bold", sans-serif;
+	font-family: 'Merriweather', serif;
 	color: #252525;
 	font-style: normal;
 	text-rendering: optimizeLegibility;
@@ -108,12 +108,12 @@ h3, .h03, h4, .h04 {
 	margin-bottom: 1.8rem;
 }
 h5, .h05, h6, .h06 {
-	font-family: "raleway-heavy";
+	font-family: 'Merriweather', serif;
 	margin-bottom: 1.2rem;
 }
 
 h1, .h01 {
-	font-size: 3.1rem;
+	font-size: 5rem;
 	line-height: 1.35;
 	letter-spacing: -.1rem;
 }
@@ -129,12 +129,14 @@ h2, .h02 {
 	line-height: 1.25;
 }
 h3, .h03 {
-	font-size: 2rem;
+	font-size: 3rem;
 	line-height: 1.5;
 }
 h4, .h04 {
-	font-size: 1.7rem;
-	line-height: 1.76;
+	/* font-size: 1.7rem;
+	line-height: 1.76; */
+	font-size: 3rem;
+	margin-top: 0.3rem;
 }
 h5, .h05 {
 	font-size: 1.4rem;
@@ -153,7 +155,7 @@ p img {
 	margin: 0;
 }
 p.lead {
-	font-family: "merriweather-light", serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.8rem;
 	line-height: 1.8;
 	color: #737373;
@@ -171,10 +173,10 @@ em, i, strong, b {
 	font-weight: normal;
 }
 em, i {
-	font-family: "merriweather-italic", serif;
+	font-family: 'Merriweather', serif;
 }
 strong, b {
-	font-family: "merriweather-bold", serif;
+	font-family: 'Merriweather', serif;
 }
 small {
 	font-size: 1.1rem;
@@ -217,7 +219,7 @@ blockquote cite a, blockquote cite a:visited {
 	border: none;
 }
 abbr {
-	font-family: "merriweather-bold", serif;
+	font-family: 'Merriweather', serif;
 	font-variant: small-caps;
 	text-transform: lowercase;
 	letter-spacing: .05rem;
@@ -326,7 +328,7 @@ table {
 	border-width: 0;
 	width: 100%;
 	max-width: 100%;
-	font-family: "raleway-regular", sans-serif;
+	font-family: 'Merriweather', serif;
 }
 th, td {
 	padding: 1.5rem 3rem;
@@ -335,7 +337,7 @@ th, td {
 }
 th {
 	color: #252525;
-	font-family: "raleway-bold", sans-serif;
+	font-family: 'Merriweather', serif;
 }
 td {
 	line-height: 1.5;
@@ -502,9 +504,9 @@ select {
 	padding: 1.5rem 2rem;
 	border: 0;
 	outline: none;
-	vertical-align: middle;
+	/* vertical-align: middle; */
 	color: #737373;
-	font-family: "merriweather-regular", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.5rem;
 	line-height: 3rem;
 	border-radius: 3px;
@@ -575,7 +577,7 @@ select:focus {
 	border: 1px solid #d2fef9;
 }
 label, legend {
-	font-family: "merriweather-bold", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.4rem;
 	margin-bottom: .6rem;
 	color: #404040;
@@ -625,7 +627,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
 	display: inline-block;
-	font-family: "raleway-bold", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.6rem;
 	height: 5rem;
 	line-height: 5rem;
@@ -726,7 +728,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	position: relative;
 }
 .section-intro h1 {
-	font-family: "merriweather-bold", serif;
+	font-family: 'Merriweather', serif;
 	font-size: 4.8rem;
 	color: #252525;
 	line-height: 1.25;
@@ -759,7 +761,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 @media only screen and (max-width:600px) {
 	section .h01 {
-		font-size: 2.5rem;
+		font-size: 4rem;
 	}
 }
 
@@ -782,7 +784,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 		font-size: 3.8rem;
 	}
 	.section-intro h5 {
-		font-size: 1.5rem;
+		font-size: 3rem;
 		letter-spacing: .3rem;
 	}
 }
@@ -893,7 +895,7 @@ a.menu-toggle {
 
 /* main-nav-wrap */
 #main-nav-wrap {
-	font-family: "raleway-heavy", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 11.5px;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
@@ -1190,7 +1192,7 @@ a.menu-toggle {
 }
 .intro-content h1 {
 	color: #FFFFFF;
-	font-family: "raleway-heavy", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 3rem;
 	line-height: 1.334;
 	/* max-width: 800px; */
@@ -1199,7 +1201,7 @@ a.menu-toggle {
 }
 .intro-content h5 {
 	color: rgba(255, 255, 255, 0.6);
-	font-family: "raleway-heavy", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.8rem;
 	line-height: 1.667;
 	margin-bottom: 0.6rem;
@@ -1220,7 +1222,7 @@ a.menu-toggle {
 	line-height: 6rem;
 	padding: 0 3rem !important;
 	margin-top: 1.8rem;
-	font-family: "raleway-heavy", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .4rem;
@@ -1264,7 +1266,7 @@ a.menu-toggle {
 		max-width: 550px;
 	}
 	.intro-content h5 {
-		font-size: 1.5rem;
+		font-size: 3rem;
 		letter-spacing: .15rem;
 	}
 }
@@ -1666,7 +1668,7 @@ a.menu-toggle {
 	margin-left: -40px;
 }
 .pricing-content .price-block .plan-price {
-	font-family: "raleway-bold", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 5rem;
 	line-height: 1;
 	margin-bottom: .6rem;
@@ -1678,7 +1680,7 @@ a.menu-toggle {
 }
 .pricing-content .price-block .price-month {
 	margin-bottom: 1.2rem;
-	font-family: "raleway-bold", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.6rem;
 }
 .pricing-content .price-block .price-meta {
@@ -1698,7 +1700,7 @@ a.menu-toggle {
 }
 .pricing-content .price-block .features {
 	list-style: none;
-	font-family: "raleway-bold", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.5rem;
 	color: rgba(0, 0, 0, 0.4);
 	margin: .6rem 0 1.8rem 0;
@@ -1709,7 +1711,7 @@ a.menu-toggle {
 }
 .pricing-content .price-block .features li strong {
 	color: #353F49;
-	font-family: "raleway-bold", serif;
+	font-family: 'Merriweather', serif;
 	margin-right: 5px;
 }
 .pricing-content .price-block .features li:last-child {
@@ -1727,7 +1729,7 @@ a.menu-toggle {
 	text-align: center;
 	color: #FFFFFF;
 	background: #38424e;
-	font-family: "raleway-heavy", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	letter-spacing: .15rem;
@@ -1817,7 +1819,7 @@ a.menu-toggle {
 	position: relative;
 }
 #testimonial-slider p {
-	font-family: "raleway-medium", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 2.5rem;
 	line-height: 1.8;
 	color: #8d8d8d;
@@ -1846,14 +1848,14 @@ a.menu-toggle {
 	margin: 0 auto 1.2rem auto;
 	display: block;
 	border-radius: 50%;
-	vertical-align: middle;
+	/* vertical-align: middle; */
 	border: 9px solid #EAEAED;
 }
 #testimonial-slider .testimonial-author .author-info {
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	font-family: "raleway-heavy", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.5rem;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -1862,7 +1864,7 @@ a.menu-toggle {
 }
 #testimonial-slider .testimonial-author .author-info span {
 	display: block;
-	font-family: "raleway-semibold", sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 1.4rem;
 	line-height: 2.1rem;
 	letter-spacing: 0;
@@ -2171,9 +2173,9 @@ a.menu-toggle {
 
 footer {
 	padding-bottom: 3rem;
-	font-size: 1.5rem;
+	font-size: 3rem;
 	line-height: 2.7rem;
-	font-family: "raleway-medium", sans-serif;
+	font-family: 'Merriweather', serif;
 	color: #465166;
 }
 footer a, footer a:visited {
@@ -2203,7 +2205,7 @@ footer ul li {
 	font-size: 1.5rem;
 }
 .footer-main ul li {
-	font-family: "raleway-bold", sans-serif;
+	font-family: 'Merriweather', serif;
 	list-style: none;
 }
 .footer-main ul a, .footer-main ul a:visited {
@@ -2232,7 +2234,7 @@ footer ul li {
 	background: #232933;
 	border: none;
 	width: 100%;
-	font-family: "raleway-regular", sans-serif;
+	font-family: 'Merriweather', serif;
 	color: #bababa;
 	margin-bottom: 1.8rem;
 }
@@ -2240,7 +2242,7 @@ footer ul li {
 	display: none;
 }
 .footer-main .footer-subscribe .subscribe-form .subscribe-message {
-	font-family: "raleway-bold", sans-serif;
+	font-family: 'Merriweather', serif;
 	color: #FFFFFF;
 }
 .footer-main .footer-subscribe .subscribe-form .subscribe-message i {
@@ -2378,18 +2380,4 @@ footer ul li {
 #go-top a:hover {
 	background: #ff7b29;
 	color: #FFFFFF;
-}«
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*# sourceMappingURL=main.css.map */
+}

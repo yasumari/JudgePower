@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="de">
+
 <head>
   <meta charset="UTF-8">
   <title>JudgePower Prototype</title>
@@ -18,59 +19,186 @@
   <script src="http://responsivevoice.org/responsivevoice/responsivevoice.js"></script>
 
   <script>
-      responsiveVoice.OnVoiceReady = function() {
-        responsiveVoice.speak("Was verschenkt man am besten?", "Deutsch Female");
-        console.log("document ready")
-      };
-    </script>
+    responsiveVoice.OnVoiceReady = function () {
+      responsiveVoice.speak("Was verschenkt man am besten?", "Deutsch Female");
+      console.log("document ready")
+    };
+  </script>
+
+  <!-- Keybindings fuer die Links mit Wartezeit fuer die Animation -->
+  <script>
+
+    $(window).on("load", function () {
+      $(window).focus()
+    });
+
+    $(document).keydown(function (e) {
+
+      var href = "q2.html";
+
+      switch (e.which) {
+        case 49: // 1
+          $('.yellow_box .overlay').addClass('selected');
+
+          setTimeout(function () {
+            window.location.href = href;
+          }, 1200);
+          break;
+
+        case 50: // 2
+          $('.green_box .overlay').addClass('selected');
+
+          setTimeout(function () {
+            window.location.href = href;
+          }, 1200);
+          break;
+
+        case 51: // 3s
+          $('.blue_box .overlay').addClass('selected');
+
+          setTimeout(function () {
+            window.location.href = href;
+          }, 1200);
+          break;
+          
+        case 52: // 4
+          $('.red_box .overlay').addClass('selected');
+
+          setTimeout(function () {
+            window.location.href = href;
+          }, 1200);
+          break;
+      }
+
+      e.preventDefault();
+    });
+  </script>
+
+  <style>
+    .box {
+      position: relative;
+      width: 100%;
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: 1s ease;
+      transition: 1s ease;
+    }
+
+    .selected {
+      -webkit-transform: scale(3);
+      -ms-transform: scale(3);
+      transform: scale(3);
+    }
+
+    .text {
+      color: #17c152;
+      font-size: 5em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .box_element {
+      max-width: 20%;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h4 {
+      font-size: 2rem;
+    }
+  </style>
 
 </head>
 
-<body class="d-flex flex-column">
+<body class="d-flex flex-column justify-content-center">
 
-  <div class="container m-auto">
+  <div>
 
-      <div class="row justify-content-center">
-        <h1 class="text-center">Was verschenkt man am besten?</h1>
-        <!-- <h5 class="text-center">Wähle nur ein Geschenk</h5> -->
-      </div>
+    <div class="mb-5">
+      <h1 class="text-center">Was verschenkt man am besten?</h1>
+    </div>
 
-    <div class="row justify-content-center mt-5">
-      <div class="col-3 ">
+    <div class="d-flex flex-row justify-content-around">
+      <div class="box_element yellow_box">
         <center>
-          <a href="q2.html"><img src="images/money.jpg" alt="Geld"></a>
-          <h4 class="text-center">Geld</h4></br>
+          <div class="box">
+            <a href="q2.html"><img src="images/money.jpg" alt="Geld"></a>
+            <div class="overlay">
+              <div class="text"><img src="images/check.png"></div>
+            </div>
+          </div>
+          <h4 class="text-center">Geld</h4><br>
           <img src="images/yellow.png" width="40%">
+
         </center>
       </div>
 
-      <div class="col-3 ">
+      <div class="box_element green_box">
         <center>
-          <a href="q2.html"><img src="images/tech.jpg" alt="Technik"></a>
-          <h4 class="text-center">Technik</h4></br>
+          <div class="box">
+            <a href="q2.html"><img src="images/tech.jpg" alt="Technik"></a>
+            <div class="overlay">
+              <div class="text"><img src="images/check.png"></div>
+            </div>
+          </div>
+          <h4 class="text-center">Technik</h4><br>
           <img src="images/green.png" width="40%">
         </center>
       </div>
 
-      <div class="col-3 ">
+      <div class="box_element blue_box">
         <center>
-          <a href="q2.html"><img src="images/Parfum.jpg" alt="Parfum"></a>
-          <h4 class="text-center">Parfum</h4></br>
-          <img src="images/red.png" width="40%">
+          <div class="box">
+            <a href="q2.html"><img src="images/Parfum.jpg" alt="Parfum"></a>
+            <div class="overlay">
+              <div class="text"><img src="images/check.png"></div>
+            </div>
+          </div>
+          <h4 class="text-center">Parfum</h4><br>
+          <img src="images/blue.png" width="40%">
         </center>
       </div>
 
-      <div class="col-3 ">
+      <div class="box_element red_box">
         <center>
-          <a href="q2.html"><img src="images/candy.jpg" alt="Suessigkeiten"></a>
-          <h4 class="text-center">Suessigkeiten</h4></br>
-          <img src="images/button.png" width="40%">
+          <div class="box">
+            <a href="q2.html"><img src="images/candy.jpg" alt="Suessigkeiten"></a>
+            <div class="overlay">
+              <div class="text"><img src="images/check.png"></div>
+            </div>
+          </div>
+          <h4 class="text-center">Suessigkeiten</h4><br>
+          <img src="images/red.png" width="40%">
         </center>
       </div>
     </div>
   </div>
 
-   <!-- Java Script
+  <!-- Java Script
    ================================================== -->
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/jquery-migrate-1.2.1.min.js"></script>

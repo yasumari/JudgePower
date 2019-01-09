@@ -2,8 +2,8 @@
  * Animation module with all animation code
  */
 /* @import url(http://fonts.googleapis.com/css?family=Ubuntu:300); */
-.anim-text-flow,
-.anim-text-flow-hover:hover {
+/* .anim-text-flow,
+.anim-text-flow-hover:hover { */
   /*
    * Animation variables
    */
@@ -16,7 +16,7 @@
   /*
    * Element animation delay loop
    */
-}
+/* } */
 
 .anim-text-flow span,
 .anim-text-flow-hover:hover span {
