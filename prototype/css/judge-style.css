@@ -1,0 +1,286 @@
+/* JudgePower styleguide definitions */
+
+body {
+    background-color: #3E444A;
+    color: #F5F5F5;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+@media all and (orientation:portrait) {
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+b {
+    font-weight: 900;
+}
+
+.main-logo {
+    width: 14em;
+}
+
+.button-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.judge-button {
+    position: relative;
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    padding: 1em;
+    padding-left: 3.5em;
+    border-radius: 0.5em;
+    background-image: linear-gradient(to right, transparent 25%, #7654D3 25%);
+    /* workaround: z-index of button elements was fucked up -> transform fixes it for some reason */
+    transform: scale(1);
+}
+
+.judge-button:after {
+    position: absolute;
+    display: inline-block;
+    content: ' ';
+    background-color: #7654D3;
+    background-image: url(../assets/img/gavel.svg);
+    background-size: 2.25em;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    top: -0.5em;
+    left: 0em;
+    border-radius: 50%;
+    vertical-align: middle;
+    z-index: -1;
+}
+
+.scale {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.current-scale-value {
+    font-size: 4em;
+}
+
+.progress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.progress-control {
+    height: 4em;
+    width: 4em;
+    padding: 0 0.5em;
+}
+
+.progress-control img {
+    height: 100%;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 2em;
+    background-color: #F5F5F5;
+    border-style: solid;
+    border-color: #F5F5F5;
+    border-width: 0.25em;
+    border-radius: 0.5em;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 2em;
+    background-color: #658fc6;
+    border-radius: 0.5em;
+    transition: 0.5s cubic-bezier(0, 1, 0.5, 1);
+}
+
+.step-container {
+    display: flex;
+}
+
+.step {
+    position: relative;
+    top: -0.5em;
+    width: 25%;
+    height: 0.75em;
+    border-right: 0.2em solid #3E444A;
+    z-index: 2;
+    display: block;
+}
+
+.step:last-of-type {
+    border-right: 0;
+}
+
+.acce-1 {
+    border-color: #7654D3;
+}
+
+.acce-2 {
+    border-color: #FFFF7E;
+}
+
+.acce-3 {
+    border-color: #52D1C7;
+}
+
+.acce-4 {
+    border-color: #EA73B8;
+}
+
+@keyframes hit {
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.selected {
+    animation-name: hit;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+/* load google fonts */
+/* muli-regular - latin */
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/muli-v12-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Muli Regular'), local('Muli-Regular'),
+        /* IE6-IE8 */
+        url('../assets/fonts/muli-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* Super Modern Browsers */
+        url('../assets/fonts/muli-v12-latin-regular.woff2') format('woff2'),
+        /* Modern Browsers */
+        url('../assets/fonts/muli-v12-latin-regular.woff') format('woff'),
+        /* Safari, Android, iOS */
+        url('../assets/fonts/muli-v12-latin-regular.ttf') format('truetype'),
+        /* Legacy iOS */
+        url('../assets/fonts/muli-v12-latin-regular.svg#Muli') format('svg');
+}
+
+/* muli-bold - latin */
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/muli-v12-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local('Muli Bold'), local('Muli-Bold'),
+        /* IE6-IE8 */
+        url('../assets/fonts/muli-v12-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* Super Modern Browsers */
+        url('../assets/fonts/muli-v12-latin-700.woff2') format('woff2'),
+        /* Modern Browsers */
+        url('../assets/fonts/muli-v12-latin-700.woff') format('woff'),
+        /* Safari, Android, iOS */
+        url('../assets/fonts/muli-v12-latin-700.ttf') format('truetype'),
+        /* Legacy iOS */
+        url('../assets/fonts/muli-v12-latin-700.svg#Muli') format('svg');
+}
+
+/* muli-extrabold - latin */
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../assets/fonts/muli-v12-latin-800.eot');
+    /* IE9 Compat Modes */
+    src: local('Muli ExtraBold'), local('Muli-ExtraBold'),
+        /* IE6-IE8 */
+        url('../assets/fonts/muli-v12-latin-800.eot?#iefix') format('embedded-opentype'),
+        /* Super Modern Browsers */
+        url('../assets/fonts/muli-v12-latin-800.woff2') format('woff2'),
+        /* Modern Browsers */
+        url('../assets/fonts/muli-v12-latin-800.woff') format('woff'),
+        /* Safari, Android, iOS */
+        url('../assets/fonts/muli-v12-latin-800.ttf') format('truetype'),
+        /* Legacy iOS */
+        url('../assets/fonts/muli-v12-latin-800.svg#Muli') format('svg');
+}
+
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/lato-v14-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Lato Regular'), local('Lato-Regular'),
+        /* IE6-IE8 */
+        url('../assets/fonts/lato-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* Super Modern Browsers */
+        url('../assets/fonts/lato-v14-latin-regular.woff2') format('woff2'),
+        /* Modern Browsers */
+        url('../assets/fonts/lato-v14-latin-regular.woff') format('woff'),
+        /* Safari, Android, iOS */
+        url('../assets/fonts/lato-v14-latin-regular.ttf') format('truetype'),
+        /* Legacy iOS */
+        url('../assets/fonts/lato-v14-latin-regular.svg#Lato') format('svg');
+}
+
+/* lato-italic - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../assets/fonts/lato-v14-latin-italic.eot');
+    /* IE9 Compat Modes */
+    src: local('Lato Italic'), local('Lato-Italic'),
+        /* IE6-IE8 */
+        url('../assets/fonts/lato-v14-latin-italic.eot?#iefix') format('embedded-opentype'),
+        /* Super Modern Browsers */
+        url('../assets/fonts/lato-v14-latin-italic.woff2') format('woff2'),
+        /* Modern Browsers */
+        url('../assets/fonts/lato-v14-latin-italic.woff') format('woff'),
+        /* Safari, Android, iOS */
+        url('../assets/fonts/lato-v14-latin-italic.ttf') format('truetype'),
+        /* Legacy iOS */
+        url('../assets/fonts/lato-v14-latin-italic.svg#Lato') format('svg');
+}
+
+/* lato-black - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../assets/fonts/lato-v14-latin-900.eot');
+    /* IE9 Compat Modes */
+    src: local('Lato Black'), local('Lato-Black'),
+        /* IE6-IE8 */
+        url('../assets/fonts/lato-v14-latin-900.eot?#iefix') format('embedded-opentype'),
+        /* Super Modern Browsers */
+        url('../assets/fonts/lato-v14-latin-900.woff2') format('woff2'),
+        /* Modern Browsers */
+        url('../assets/fonts/lato-v14-latin-900.woff') format('woff'),
+        /* Safari, Android, iOS */
+        url('../assets/fonts/lato-v14-latin-900.ttf') format('truetype'),
+        /* Legacy iOS */
+        url('../assets/fonts/lato-v14-latin-900.svg#Lato') format('svg');
+}

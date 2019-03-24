@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/judge-style.css" rel="stylesheet">
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../js/scale.js"></script>
+    <script src="../js/effects.js"></script>
+    <script src="../js/navigate.js"></script>
+    <script src="../js/voice.js"></script>
+</head>
+
+<body next-page="end.html">
+    <div class="main-container">
+        <div class="text-logo-container">
+            <img class="text-logo" src="../assets/img/logo_var_text.png">
+        </div>
+        <div class="question-container">
+            <h1 voice>
+                Welcher Preis ist für das Geburtstagsgeschenk des besten Freundes angebracht?
+            </h1>
+        </div>
+        <div class="scale-container">
+            <div class="scale">
+                <div class="current-scale-value"></div>
+                <div class="progress">
+                    <div class="progress-control" animate-on-keys="1"><img src="../assets/img/minus.svg"></div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                        <div class="step-container" default-value="&lt;20 €">
+                            <span class="step" step-value="20 - 40 €"></span>
+                            <span class="step" step-value="40 - 60 €"></span>
+                            <span class="step" step-value="60 - 80 €"></span>
+                            <span class="step" step-value="&gt;80 €"></span>
+                        </div>
+                    </div>
+                    <div class="progress-control" animate-on-keys="2"><img src="../assets/img/plus.svg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <div class="judge-button" animate-on-keys="4" navigate>
+                Bestätigen
+            </div>
+        </div>
+</body>
+
+</html>
