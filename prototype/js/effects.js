@@ -27,7 +27,6 @@ function play(audioElement) {
 $(document).keypress(function (event) {
     // get all elements that include animate-on-keys attribute
     var allAnimationElements = $('*[animate-on-keys]');
-    console.log(allAnimationElements);
     // get all elements that include key input in attribute value
     var matchingAnimationElements = Object.values(allAnimationElements).filter(element => {
         var allowedKeys = $(element).attr('animate-on-keys');

@@ -1,8 +1,24 @@
 /* JudgePower styleguide definitions */
 
+:root {
+    --main-bg-color: #3E444A;
+    --main-text-color: #F5F5F5;
+
+    --color-progress-bar: #658fc6;
+    --color-progress-bar-tick: #3E444A;
+
+    --color-1: #7654D3;
+    --color-2: #FFFF7E;
+    --color-3: #52D1C7;
+    --color-4: #EA73B8;
+
+    --color-positive: #95FFBE;
+    --color-negative: #FF9595;
+}
+
 body {
-    background-color: #3E444A;
-    color: #F5F5F5;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     font-family: 'Lato', sans-serif;
 }
 
@@ -43,7 +59,7 @@ b {
     padding: 1em;
     padding-left: 3.5em;
     border-radius: 0.5em;
-    background-image: linear-gradient(to right, transparent 25%, #7654D3 25%);
+    background-image: linear-gradient(to right, transparent 25%, var(--color-1) 25%);
     /* workaround: z-index of button elements was fucked up -> transform fixes it for some reason */
     transform: scale(1);
 }
@@ -52,7 +68,7 @@ b {
     position: absolute;
     display: inline-block;
     content: ' ';
-    background-color: #7654D3;
+    background-color: var(--color-1);
     background-image: url(../assets/img/gavel.svg);
     background-size: 2.25em;
     background-position: center;
@@ -95,9 +111,9 @@ b {
 .progress-bar-container {
     width: 100%;
     height: 2em;
-    background-color: #F5F5F5;
+    background-color: var(--main-text-color);
     border-style: solid;
-    border-color: #F5F5F5;
+    border-color: var(--main-text-color);
     border-width: 0.25em;
     border-radius: 0.5em;
 }
@@ -105,7 +121,7 @@ b {
 .progress-bar {
     width: 0%;
     height: 2em;
-    background-color: #658fc6;
+    background-color: var(--color-progress-bar);
     border-radius: 0.5em;
     transition: 0.5s cubic-bezier(0, 1, 0.5, 1);
 }
@@ -119,7 +135,7 @@ b {
     top: -0.5em;
     width: 25%;
     height: 0.75em;
-    border-right: 0.2em solid #3E444A;
+    border-right: 0.2em solid var(--color-progress-bar-tick);
     z-index: 2;
     display: block;
 }
@@ -129,19 +145,105 @@ b {
 }
 
 .acce-1 {
-    border-color: #7654D3;
+    border-color: var(--color-1);
 }
 
 .acce-2 {
-    border-color: #FFFF7E;
+    border-color: var(--color-2);
 }
 
 .acce-3 {
-    border-color: #52D1C7;
+    border-color: var(--color-3);
 }
 
 .acce-4 {
-    border-color: #EA73B8;
+    border-color: var(--color-4);
+}
+
+.bgc-1 {
+    background-color: var(--color-1);
+}
+
+.bgc-2 {
+    background-color: var(--color-2);
+}
+
+.bgc-3 {
+    background-color: var(--color-3);
+}
+
+.bgc-4 {
+    background-color: var(--color-4);
+}
+
+.bgc-pos {
+    background-color: var(--color-positive);
+}
+
+.bgc-neg {
+    background-color: var(--color-negative);
+}
+
+.help-hint {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    padding: 0.25em 0.75em;
+    margin: 1em;
+    border-radius: 0.5em;
+    font-size: 0.75em;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.help-hint img {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 1em;
+    margin: 0.5em 0.5em 0.5em 0;
+}
+
+.help-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 3em;
+    padding-top: 23em;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all cubic-bezier(0, 1, 0.5, 1) 0.4s;
+}
+
+.help-overlay-button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.help-overlay-button {
+    font-size: 2em;
+    font-weight: 900;
+    color: #090A0B;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.5em;
+    width: 2em;
+    height: 2em;
 }
 
 @keyframes hit {
@@ -164,7 +266,9 @@ b {
     animation-duration: 1s;
 }
 
+
 /* load google fonts */
+
 /* muli-regular - latin */
 @font-face {
     font-family: 'Muli';
