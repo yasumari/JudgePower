@@ -8,12 +8,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-@media all and (orientation:portrait) {
-    body {
-        font-size: 2.74vw;
-    }
-}
-
 .basic-container {
     display: flex;
     flex-direction: column;
@@ -21,13 +15,6 @@ body {
     align-items: center;
     margin: 0 auto;
     width: 50%;
-}
-
-@media all and (orientation:portrait) {
-    .basic-container {
-        padding: 1em;
-        width: 100%;
-    }
 }
 
 .basic-container-element {
@@ -69,14 +56,6 @@ body {
     width: 100%;
 }
 
-@media all and (orientation:portrait) {
-    .answer-container {
-        padding: 1em;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 .text-logo-container {
     display: flex;
     align-items: flex-end;
@@ -104,4 +83,27 @@ body {
 
 .answer-container-posneg-element {
     max-width: 20%;
+}
+
+/* specifications for mobile portrait mode */
+@media all and (orientation:portrait) {
+    body {
+        font-size: 2.74vw;
+    }
+
+    .basic-container {
+        padding: 1em;
+        width: 100%;
+    }
+
+    .answer-container {
+        padding: 1em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .answer-container-posneg-element {
+        width: 25%;
+        max-width: 35%;
+    }
 }
